@@ -1,5 +1,16 @@
+import Footer from '@/components/footer'
 import NavBar from '@/components/navbar'
 import Head from 'next/head'
+
+function Scroll() {
+  return (
+    <>
+      <main className='w-full px-8 lg:px-16 pt-8 pb-0'>
+
+      </main>
+    </>
+  )
+}
 
 export default function Home() {
   return (
@@ -10,9 +21,11 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className='flex flex-col h-screen justify-between'>
+      <div className='flex flex-col h-screen justify-between'>
         <NavBar />
-      </main>
+        <Scroll />
+        <Footer />
+      </div>
     </>
   )
 }
