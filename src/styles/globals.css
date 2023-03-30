@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: 'Noto Naskh Arabic';
+    font-style: normal;
+    font-weight: normal;
+    src: url(/font/NotoNaskhArabic-Regular.ttf);
+}
+
+.zer {
+    font-family: 'Noto Naskh Arabic', serif;
+    @apply text-zinc-200;
+    @apply text-lg;
+}
