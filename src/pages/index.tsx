@@ -29,8 +29,6 @@ export default function Home() {
       <Head>
         <title>Jomleha</title>
         <meta name="description" content="Jomleha" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className='flex flex-col h-screen justify-between'>
         <NavBar />
