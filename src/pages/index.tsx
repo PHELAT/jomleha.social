@@ -3,10 +3,10 @@ import NavBar from '@/components/navbar'
 import Head from 'next/head'
 import Link from 'next/link'
 
-function Jomleh() {
+function Jomleh(id: number) {
   return (
     <>
-      <Link href="/">
+      <Link href={`/jomleh/${id}`}>
         <p className='zer hover:underline'>این یک جمله‌ی تست است این یک جمله‌ی تست است این یک جمله‌ی تست است این یک جمله‌ی تست است این یک جمله‌ی تست است این یک جمله‌ی تست است این یک جمله‌ی تست است این یک جمله‌ی تست است این یک جمله‌ی تست است این یک جمله‌ی تست است این یک جمله‌ی تست است این یک جمله‌ی تست است این یک جمله‌ی تست است </p>
       </Link>
     </>
@@ -17,7 +17,7 @@ function Scroll() {
   const content = () => {
     const items = [];
     for (let i = 0; i < 10; i++) {
-      items.push(Jomleh());
+      items.push(Jomleh(i));
     }
     return items;
   }
