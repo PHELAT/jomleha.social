@@ -1,12 +1,23 @@
 import Footer from '@/components/footer'
 import NavBar from '@/components/navbar'
 import Head from 'next/head'
+import Link from 'next/link'
+
+function Jomleh() {
+  return (
+    <>
+      <Link href="/">
+        <p className='zer hover:underline'>این یک جمله‌ی تست است این یک جمله‌ی تست است این یک جمله‌ی تست است این یک جمله‌ی تست است این یک جمله‌ی تست است این یک جمله‌ی تست است این یک جمله‌ی تست است این یک جمله‌ی تست است این یک جمله‌ی تست است این یک جمله‌ی تست است این یک جمله‌ی تست است این یک جمله‌ی تست است این یک جمله‌ی تست است </p>
+      </Link>
+    </>
+  )
+}
 
 function Scroll() {
   const content = () => {
     const items = [];
     for (let i = 0; i < 10; i++) {
-      items.push(<p className='zer'>این یک جمله‌ی تست است این یک جمله‌ی تست است این یک جمله‌ی تست است این یک جمله‌ی تست است این یک جمله‌ی تست است این یک جمله‌ی تست است این یک جمله‌ی تست است این یک جمله‌ی تست است این یک جمله‌ی تست است این یک جمله‌ی تست است این یک جمله‌ی تست است این یک جمله‌ی تست است این یک جمله‌ی تست است </p>);
+      items.push(Jomleh());
     }
     return items;
   }
