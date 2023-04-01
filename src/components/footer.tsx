@@ -4,7 +4,7 @@ export default function Footer() {
     const footerIcons = () => {
         const content = [];
         for (let i = 0; i < 8; i++) {
-            content.push(<Image src="/jomleha.svg" alt="لوگوی جمله‌ها" width="12" height="12" />);
+            content.push(<Image src="/jomleha.svg" alt="لوگوی جمله‌ها" width="12" height="12" key={`footericon${i}`}/>);
         }
         return content;
     }
