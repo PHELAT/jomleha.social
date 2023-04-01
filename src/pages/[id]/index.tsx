@@ -9,6 +9,9 @@ async function fetchJomleh(id: string): Promise<Jomleh> {
 
     const db = getFirestore();
     const snapshot = await db.collection('jomleha').doc(id).get();
+    if (!snapshot.exists) {
+        return Promise.reject()
+    }
     const jomleh = { id: snapshot.id, ...snapshot.data() }
 
     return jomleh;
@@ -18,13 +21,19 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     const { id } = context.query;
 
     await initFirebase();
-    const pageProps: Jomleh = await fetchJomleh(`${id}`);
-
-    return {
-        props: {
-            pageProps,
-        }
-    }
+    return await fetchJomleh(`${id}`)
+        .then(pageProps => {
+            return {
+                props: {
+                    pageProps,
+                }
+            }
+        })
+        .catch(error => {
+            return {
+                notFound: true,
+            }
+        });
 }
 
 export default function JomlehPage({ pageProps }: InferGetServerSidePropsType<typeof getServerSideProps>) {
