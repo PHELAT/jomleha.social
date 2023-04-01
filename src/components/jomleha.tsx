@@ -26,7 +26,7 @@ const parseContent = (content: Jomleh[]) => {
     content.forEach(element => {
         elements.push(
             <div className="border-r-2 border-stone-500 rounded border-dotted pr-4" key={element.id}>
-                <Link href={`/jomleh/${element.id}`}>
+                <Link href={`/${element.id}`}>
                     <p className="zer hover:underline">{element.jomleh}</p>
                 </Link>
             </div>
