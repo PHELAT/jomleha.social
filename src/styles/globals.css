@@ -13,4 +13,5 @@
     font-family: 'Noto Naskh Arabic', serif;
     @apply text-zinc-200;
     @apply text-lg;
+    @apply inline;
 }

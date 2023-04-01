@@ -1,40 +1,30 @@
-import Footer from '@/components/footer'
-import NavBar from '@/components/navbar'
-import Head from 'next/head'
-import Link from 'next/link'
+import Footer from '@/components/footer';
+import { Jomleh, JomlehaProps } from '@/components/jomleha';
+import Jomleha from '@/components/jomleha';
+import Head from 'next/head';
+import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
 
-function Jomleh(id: number) {
-  return (
-    <>
-      <Link href={`/jomleh/${id}`}>
-        <p className='zer hover:underline'>این یک جمله‌ی تست است این یک جمله‌ی تست است این یک جمله‌ی تست است این یک جمله‌ی تست است این یک جمله‌ی تست است این یک جمله‌ی تست است این یک جمله‌ی تست است این یک جمله‌ی تست است این یک جمله‌ی تست است این یک جمله‌ی تست است این یک جمله‌ی تست است این یک جمله‌ی تست است این یک جمله‌ی تست است </p>
-      </Link>
-    </>
-  )
-}
-
-function Scroll() {
-  const content = () => {
-    const items = [];
-    for (let i = 0; i < 10; i++) {
-      items.push(Jomleh(i));
-    }
-    return items;
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const sampleData: Jomleh[] = []
+  for (let i = 0; i < 30; i++) {
+    sampleData.push(
+      {
+        id: i,
+        jomleh: "این یک جمله‌ی تست است."
+      }
+    );
   }
-  return (
-    <>
-      <main className='w-full flex items-center justify-center px-8 lg:px-16 pt-8'>
-        <div className='max-w-full md:max-w-md lg:max-w-xl max-h-96 overflow-y-auto'>
-          <div className='flex flex-col gap-y-4'>
-            {content()}
-          </div>
-        </div>
-      </main>
-    </>
-  )
+  const pageProps: JomlehaProps = { 
+    content: sampleData
+  }
+  return {
+    props: {
+      pageProps,
+    }
+  }
 }
 
-export default function Home() {
+export default function Home({ pageProps }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   return (
     <>
       <Head>
@@ -42,8 +32,7 @@ export default function Home() {
         <meta name="description" content="Jomleha" />
       </Head>
       <div className='flex flex-col h-screen justify-between'>
-        <NavBar />
-        <Scroll />
+        <Jomleha {...pageProps} />
         <Footer />
       </div>
     </>
