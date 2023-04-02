@@ -9,7 +9,7 @@ async function fetchJomleha(): Promise<Jomleh[]> {
   const { getFirestore } = require('firebase-admin/firestore');
 
   const db = getFirestore();
-  const snapshot = await db.collection('jomleha').get();
+  const snapshot = await db.collection('jomleha').orderBy("added", "desc").get();
   const jomleha: Jomleh[] = []
   snapshot.forEach((doc: any) => {
     jomleha.push({ id: doc.id, jomleh: doc.data().jomleh });
