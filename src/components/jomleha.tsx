@@ -1,8 +1,14 @@
 import Link from "next/link";
 
+export type Context = {
+    title: string,
+    url: string | undefined
+}
+
 export type Jomleh = {
     id: number,
     jomleh: string
+    context: Context | undefined
 }
 
 export interface JomlehaProps {

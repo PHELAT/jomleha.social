@@ -15,3 +15,10 @@
     @apply text-lg;
     @apply inline;
 }
+
+.manbaZer {
+    font-family: 'Noto Naskh Arabic', serif;
+    @apply text-zinc-400;
+    @apply text-base;
+    @apply inline;
+}
