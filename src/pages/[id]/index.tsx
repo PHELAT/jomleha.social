@@ -73,7 +73,7 @@ function renderContext(pageProps: Jomleh) {
     return (
         <>
             {isUrl
-                ? (<Link href={pageProps.context.url!} className="pt-8" target="blank">{contextTitle}</Link>)
+                ? (<Link href={pageProps.context.url!} className="mt-8" target="blank">{contextTitle}</Link>)
                 : contextTitle
             }
         </>
