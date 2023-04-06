@@ -13,7 +13,10 @@ async function fetchJomleh(id: string): Promise<Jomleh> {
     if (!snapshot.exists) {
         return Promise.reject()
     }
-    const jomleh = { id: snapshot.id, ...snapshot.data() }
+    const jomleh: Jomleh = {
+        id: snapshot.id,
+        ...JSON.parse(JSON.stringify(snapshot.data()))
+    }
 
     return jomleh;
 }

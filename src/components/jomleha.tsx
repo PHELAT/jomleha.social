@@ -2,13 +2,14 @@ import Link from "next/link";
 
 export type Context = {
     title: string,
-    url?: string | undefined
+    url?: string
 }
 
 export type Jomleh = {
     id: number,
-    jomleh: string
-    context?: Context | undefined
+    jomleh: string,
+    added: Date,
+    context?: Context,
 }
 
 export interface JomlehaProps {
