@@ -12,7 +12,7 @@ async function fetchJomleha(): Promise<Jomleh[]> {
   const snapshot = await db.collection('jomleha').orderBy("added", "desc").get();
   const jomleha: Jomleh[] = []
   snapshot.forEach((doc: any) => {
-    jomleha.push({ id: doc.id, jomleh: doc.data().jomleh });
+    jomleha.push({ id: doc.id, ...JSON.parse(JSON.stringify(doc.data())) });
   });
   return jomleha;
 }
