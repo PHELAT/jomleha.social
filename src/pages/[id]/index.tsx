@@ -45,6 +45,7 @@ export default function JomlehPage({ pageProps }: InferGetServerSidePropsType<ty
         <>
             <Head>
                 <title>Jomleha</title>
+                <meta name="description" content={pageProps.jomleh} />
             </Head>
             <div className='flex flex-col h-screen justify-between'>
                 <main className='w-full h-full flex items-center justify-center px-8'>
