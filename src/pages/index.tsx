@@ -35,7 +35,6 @@ export default function Home({ pageProps }: InferGetServerSidePropsType<typeof g
     <>
       <Head>
         <title>Jomleha</title>
-        <meta name="description" content="Jomleha" />
       </Head>
       <div className='flex flex-col h-screen justify-between'>
         <Jomleha {...pageProps} />

@@ -14,6 +14,7 @@ export default function Document() {
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="application-name" content="jomleha.social" />
         <meta name="apple-mobile-web-app-title" content="jomleha.social" />
+        <meta name="robots" content="index,follow" />
       </Head>
       <body className='bg-zinc-900'>
         <Main />
