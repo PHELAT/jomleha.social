@@ -58,7 +58,7 @@ export default function JomlehPage({ pageProps }: InferGetServerSidePropsType<ty
                         </div>
                     </div>
                 </main>
-                <Footer />
+                <Footer link="/" showIcons={false} />
             </div>
         </>
     )

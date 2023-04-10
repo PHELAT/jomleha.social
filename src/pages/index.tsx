@@ -38,7 +38,7 @@ export default function Home({ pageProps }: InferGetServerSidePropsType<typeof g
       </Head>
       <div className='flex flex-col h-screen justify-between'>
         <Jomleha {...pageProps} />
-        <Footer />
+        <Footer link='/about' showIcons={false} />
       </div>
     </>
   )
