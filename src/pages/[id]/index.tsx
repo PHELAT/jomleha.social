@@ -51,7 +51,7 @@ export default function JomlehPage({ pageProps }: InferGetServerSidePropsType<ty
                 <main className='w-full h-full flex items-center justify-center px-8'>
                     <div className='max-w-md'>
                         <div className="border-s-2 border-stone-500 rounded border-dotted ps-4" dir="auto">
-                            <div className='flex flex-col overflow-y-auto'>
+                            <div className='flex flex-col overflow-y-auto zarfeZer'>
                                 <p className='zer'>{pageProps.jomleh}</p>
                                 {renderContext(pageProps)}
                             </div>
