@@ -22,3 +22,16 @@
     @apply text-base;
     @apply inline;
 }
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.zarfeZer::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.zarfeZer {
+    /* IE and Edge */
+    -ms-overflow-style: none;
+    /* Firefox */
+    scrollbar-width: none;
+}
