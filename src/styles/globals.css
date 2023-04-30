@@ -14,6 +14,7 @@
     @apply text-zinc-200;
     @apply text-lg;
     @apply inline;
+    white-space: pre-line;
 }
 
 .manbaZer {
