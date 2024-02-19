@@ -3,36 +3,36 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: 'Noto Naskh Arabic';
-    font-style: normal;
-    font-weight: normal;
-    src: url(/font/NotoNaskhArabic-Regular.ttf);
+  font-family: "Noto Naskh Arabic";
+  font-style: normal;
+  font-weight: normal;
+  src: url(/font/NotoNaskhArabic-Regular.ttf);
 }
 
 .zer {
-    font-family: 'Noto Naskh Arabic', serif;
-    @apply text-zinc-200;
-    @apply text-lg;
-    @apply inline;
-    white-space: pre-line;
+  font-family: "Noto Naskh Arabic", serif;
+  @apply text-zinc-200;
+  @apply text-lg;
+  @apply inline;
+  white-space: pre-line;
 }
 
 .manbaZer {
-    font-family: 'Noto Naskh Arabic', serif;
-    @apply text-zinc-400;
-    @apply text-base;
-    @apply inline;
+  font-family: "Noto Naskh Arabic", serif;
+  @apply text-zinc-400;
+  @apply text-base;
+  @apply inline;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
 .zarfeZer::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .zarfeZer {
-    /* IE and Edge */
-    -ms-overflow-style: none;
-    /* Firefox */
-    scrollbar-width: none;
+  /* IE and Edge */
+  -ms-overflow-style: none;
+  /* Firefox */
+  scrollbar-width: none;
 }
