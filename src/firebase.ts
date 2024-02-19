@@ -1,14 +1,9 @@
-export default async function initFirebase() {
-  const {
-    initializeApp,
-    cert,
-    getApps,
-    getApp,
-  } = require("firebase-admin/app");
+import { get } from "@vercel/edge-config";
+import { cert, getApp, getApps, initializeApp } from "firebase-admin/app";
 
-  let credentials = {};
+export default async function initFirebase() {
+  let credentials;
   if (process.env.FIREBASE_CONFIG === undefined) {
-    const { get } = require("@vercel/edge-config");
     credentials = await get("GOOGLE_APPLICATION_CREDENTIALS");
   } else {
     const fileSystem = require("fs");
