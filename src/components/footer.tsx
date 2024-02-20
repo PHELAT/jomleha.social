@@ -24,13 +24,16 @@ export default function Footer({ link, showIcons }: FooterProps) {
     }
     return content;
   };
-  const footerJustify = showIcons ? "justify-between" : "justify-end";
+  const footerJustify = showIcons ? "justify-between" : "justify-start";
   return (
     <>
       <footer className="w-full">
         <div
           className={`w-full h-24 flex flex-row items-center px-8 lg:px-16 ${footerJustify}`}
         >
+          <a href={link}>
+            <div className="grid grid-cols-4 gap-1">{footerIcons()}</div>
+          </a>
           {showIcons && (
             <div className="flex flex-row gap-4 items-center">
               <Link href="https://github.com/PHELAT/jomleha.social">
@@ -41,9 +44,6 @@ export default function Footer({ link, showIcons }: FooterProps) {
               </Link>
             </div>
           )}
-          <a href={link}>
-            <div className="grid grid-cols-4 gap-1">{footerIcons()}</div>
-          </a>
         </div>
       </footer>
     </>

@@ -5,7 +5,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html className="bg-zinc-900" lang="fa" dir="rtl">
+    <html className="bg-zinc-900">
       <body>{children}</body>
     </html>
   );
