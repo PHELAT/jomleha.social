@@ -4,7 +4,7 @@ import { Metadata } from "next";
 import { getJomleh } from "@/datasource/jomleha-datasource";
 import { Jomleh } from "@/entity/jomleh";
 
-export default async function Jomleh({ params }: DetailProps) {
+export default async function DetailPage({ params }: DetailProps) {
   const data = await getJomleh(params.id);
   return (
     <div className="flex flex-col h-screen justify-between">

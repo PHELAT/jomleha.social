@@ -3,7 +3,7 @@ import { getJomleha } from "@/datasource/jomleha-datasource";
 import Link from "next/link";
 import { Jomleh } from "@/entity/jomleh";
 
-export default async function Home() {
+export default async function HomePage() {
   const jomleha = await getJomleha();
   return (
     <div className="flex flex-col h-screen justify-between">

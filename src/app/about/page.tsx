@@ -1,7 +1,7 @@
 import Footer from "@/components/Footer";
 import type { Metadata } from "next";
 
-export default function About() {
+export default function AboutPage() {
   return (
     <div className="flex flex-col h-screen justify-between bg-black">
       <main className="w-full h-full flex items-center justify-center px-8">
