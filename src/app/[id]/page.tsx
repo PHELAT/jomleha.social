@@ -2,7 +2,7 @@ import Link from "next/link";
 import Footer from "@/components/Footer";
 import { Metadata } from "next";
 import { getJomleh } from "@/datasource/jomleha-datasource";
-import { Jomleh } from "@/entity/jomleh";
+import { Context } from "@/entity/jomleh";
 
 export default async function DetailPage({ params }: DetailProps) {
   const data = await getJomleh(params.id);
@@ -16,7 +16,7 @@ export default async function DetailPage({ params }: DetailProps) {
           >
             <div className="flex flex-col overflow-y-auto zarfeZer">
               <p className="zer">{data.jomleh}</p>
-              {renderContext(data)}
+              <JomlehContext context={data.context} />
             </div>
           </div>
         </div>
@@ -35,26 +35,28 @@ export async function generateMetadata({
   };
 }
 
-function renderContext(jomleh: Jomleh) {
-  if (jomleh.context === undefined) {
-    return <></>;
+function JomlehContext({ context }: { context?: Context }) {
+  if (!context) {
+    return null;
   }
-  const isUrl = jomleh.context.url !== undefined;
-  const contextTitle = (
-    <p className={`manbaZer ${isUrl ? "hover:underline" : "pt-8"}`}>
-      {jomleh.context.title}
-    </p>
-  );
+  const contextTitle = () => {
+    return <JomlehContextTitle context={context} />;
+  };
+  if (context.url) {
+    return (
+      <Link href={context.url!} className="mt-8" target="blank">
+        {contextTitle()}
+      </Link>
+    );
+  }
+  return contextTitle();
+}
+
+function JomlehContextTitle({ context }: { context: Context }) {
   return (
-    <>
-      {isUrl ? (
-        <Link href={jomleh.context.url!} className="mt-8" target="blank">
-          {contextTitle}
-        </Link>
-      ) : (
-        contextTitle
-      )}
-    </>
+    <p className={`manbaZer ${context.url ? "hover:underline" : "pt-8"}`}>
+      {context.title}
+    </p>
   );
 }
 
