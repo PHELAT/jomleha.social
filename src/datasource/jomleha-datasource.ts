@@ -1,6 +1,6 @@
 import { unstable_cache } from "next/cache";
 import { getFirestore } from "firebase-admin/firestore";
-import initFirebase from "@/firebase";
+import initFirebase from "@/util/firebase";
 import { Jomleh, Jomleha } from "@/entity/jomleh";
 
 const JOMLEHA_COLLECTION = "jomleha";
