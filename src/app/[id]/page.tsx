@@ -1,13 +1,13 @@
 import { Jomleh } from "@/components/jomleha";
-import { getFirestore } from "firebase-admin/firestore";
 import initFirebase from "@/firebase";
 import Link from "next/link";
 import Footer from "@/components/footer";
 import { Metadata } from "next";
+import { getJomleh } from "@/datasource/jomleha";
 
 export default async function Jomleh({ params }: DetailProps) {
   await initFirebase();
-  const data = await fetchJomleh(params.id);
+  const data = await getJomleh(params.id);
   return (
     <div className="flex flex-col h-screen justify-between">
       <main className="w-full h-full flex items-center justify-center px-8">
@@ -32,21 +32,9 @@ export async function generateMetadata({
   params,
 }: DetailProps): Promise<Metadata> {
   await initFirebase();
-  const data = await fetchJomleh(params.id);
+  const data = await getJomleh(params.id);
   return {
     description: data.jomleh,
-  };
-}
-
-async function fetchJomleh(id: string): Promise<Jomleh> {
-  const db = getFirestore();
-  const snapshot = await db.collection("jomleha").doc(id).get();
-  if (!snapshot.exists) {
-    return Promise.reject();
-  }
-  return {
-    id: snapshot.id,
-    ...JSON.parse(JSON.stringify(snapshot.data())),
   };
 }
 
