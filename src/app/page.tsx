@@ -1,4 +1,4 @@
-import Footer from "@/components/footer";
+import Footer from "@/components/Footer";
 import { getJomleha } from "@/datasource/jomleha-datasource";
 import Link from "next/link";
 import { Jomleh } from "@/entity/jomleh";
