@@ -1,7 +1,7 @@
 import { unstable_cache } from "next/cache";
 import { getFirestore } from "firebase-admin/firestore";
-import { Jomleh } from "@/components/jomleha";
 import initFirebase from "@/firebase";
+import { Jomleh, Jomleha } from "@/entity/jomleh";
 
 const JOMLEHA_COLLECTION = "jomleha";
 
@@ -11,7 +11,7 @@ export const getJomleh = (id: string): Promise<Jomleh> => {
   })(id);
 };
 
-export const getJomleha = (): Promise<Jomleh[]> => {
+export const getJomleha = (): Promise<Jomleha> => {
   return fetchJomleha();
 };
 
@@ -28,14 +28,14 @@ async function fetchJomleh(id: string): Promise<Jomleh> {
   };
 }
 
-async function fetchJomleha(): Promise<Jomleh[]> {
+async function fetchJomleha(): Promise<Jomleha> {
   await initFirebase();
   const db = getFirestore();
   const snapshot = await db
     .collection(JOMLEHA_COLLECTION)
     .orderBy("added", "desc")
     .get();
-  const jomleha: Jomleh[] = [];
+  const jomleha: Jomleha = [];
   snapshot.forEach((doc: any) => {
     jomleha.push({ id: doc.id, ...JSON.parse(JSON.stringify(doc.data())) });
   });

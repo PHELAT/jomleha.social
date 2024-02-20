@@ -1,8 +1,8 @@
-import { Jomleh } from "@/components/jomleha";
 import Link from "next/link";
 import Footer from "@/components/footer";
 import { Metadata } from "next";
 import { getJomleh } from "@/datasource/jomleha";
+import { Jomleh } from "@/entity/jomleh";
 
 export default async function Jomleh({ params }: DetailProps) {
   const data = await getJomleh(params.id);

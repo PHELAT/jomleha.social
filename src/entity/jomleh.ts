@@ -9,3 +9,5 @@ export type Context = {
   title: string;
   url?: string;
 };
+
+export type Jomleha = Jomleh[];
