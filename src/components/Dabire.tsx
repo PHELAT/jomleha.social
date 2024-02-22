@@ -3,7 +3,7 @@ export default function Dabire({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <div
-      className="border-s-2 border-stone-500 rounded border-dotted ps-4"
+      className="border-s-2 border-stone-500 rounded border-dotted ps-4 min-h-12 flex items-center"
       dir="auto"
     >
       {children}
