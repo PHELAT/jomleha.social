@@ -1,7 +1,8 @@
+import "server-only";
 import { unstable_cache } from "next/cache";
 import { getFirestore } from "firebase-admin/firestore";
 import initFirebase from "@/util/firebase";
-import { JomlehEntity, Jomleha } from "@/entity/jomlehEntity";
+import { Jomleha, JomlehEntity } from "@/entity/jomlehEntity";
 
 const JOMLEHA_COLLECTION = "jomleha";
 

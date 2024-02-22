@@ -1,3 +1,4 @@
+import "server-only";
 import { get } from "@vercel/edge-config";
 import { cert, getApp, getApps, initializeApp } from "firebase-admin/app";
 
