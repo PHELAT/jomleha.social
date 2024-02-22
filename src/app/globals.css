@@ -1,36 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "Noto Naskh Arabic";
-  font-style: normal;
-  font-weight: normal;
-  src: url(/font/NotoNaskhArabic-Regular.ttf);
-}
-
-.zer {
-  font-family: "Noto Naskh Arabic", serif;
-  @apply text-zinc-200;
-  @apply text-lg;
-  @apply inline;
-  white-space: pre-line;
-}
-
-.manbaZer {
-  font-family: "Noto Naskh Arabic", serif;
-  @apply text-zinc-400;
-  @apply text-base;
-  @apply inline;
-}
-
 /* Hide scrollbar for Chrome, Safari and Opera */
-.zarfeZer::-webkit-scrollbar {
+.no-scrollbar::-webkit-scrollbar {
   display: none;
 }
 
 /* Hide scrollbar for IE, Edge and Firefox */
-.zarfeZer {
+.no-scrollbar {
   /* IE and Edge */
   -ms-overflow-style: none;
   /* Firefox */

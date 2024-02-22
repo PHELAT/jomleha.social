@@ -20,7 +20,7 @@ export default function JomlehContext({ context }: { context?: Context }) {
 
 function JomlehContextTitle({ context }: { context: Context }) {
   return (
-    <p className={`manbaZer ${context.url ? "hover:underline" : "pt-8"}`}>
+    <p className={`font-mono text-zinc-400 text-base inline ${context.url ? "hover:underline" : "pt-8"}`}>
       {context.title}
     </p>
   );

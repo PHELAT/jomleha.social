@@ -4,7 +4,13 @@ import Link from "next/link";
 export default function Jomleh({ content, link }: JomlehProps) {
   const jomleh = () => {
     const hoverUnderline = link ? "hover:underline" : "";
-    return <p className={`zer ${hoverUnderline}`}>{content.jomleh}</p>;
+    return (
+      <p
+        className={`font-mono font-medium text-zinc-200 text-lg inline whitespace-pre-line ${hoverUnderline}`}
+      >
+        {content.jomleh}
+      </p>
+    );
   };
   if (link) {
     return <Link href={link}>{jomleh()}</Link>;

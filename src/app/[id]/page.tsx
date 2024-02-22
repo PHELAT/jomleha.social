@@ -12,7 +12,7 @@ export default async function DetailPage({ params }: DetailProps) {
       <main className="w-full h-full flex items-center justify-center px-8">
         <div className="max-w-md">
           <Dabire>
-            <div className="flex flex-col overflow-y-auto zarfeZer">
+            <div className="flex flex-col overflow-y-auto no-scrollbar">
               <Jomleh content={data} />
               <JomlehContext context={data.context} />
             </div>
