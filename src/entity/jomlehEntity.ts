@@ -1,4 +1,4 @@
-export type Jomleh = {
+export type JomlehEntity = {
   id: number;
   jomleh: string;
   added: Date;
@@ -10,4 +10,4 @@ export type Context = {
   url?: string;
 };
 
-export type Jomleha = Jomleh[];
+export type Jomleha = JomlehEntity[];

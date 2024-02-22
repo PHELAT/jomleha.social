@@ -1,11 +1,11 @@
 import { unstable_cache } from "next/cache";
 import { getFirestore } from "firebase-admin/firestore";
 import initFirebase from "@/util/firebase";
-import { Jomleh, Jomleha } from "@/entity/jomleh";
+import { JomlehEntity, Jomleha } from "@/entity/jomlehEntity";
 
 const JOMLEHA_COLLECTION = "jomleha";
 
-export const getJomleh = (id: string): Promise<Jomleh> => {
+export const getJomleh = (id: string): Promise<JomlehEntity> => {
   return unstable_cache(async (id) => fetchJomleh(id), [id], {
     revalidate: 86400,
   })(id);
@@ -15,7 +15,7 @@ export const getJomleha = (): Promise<Jomleha> => {
   return fetchJomleha();
 };
 
-async function fetchJomleh(id: string): Promise<Jomleh> {
+async function fetchJomleh(id: string): Promise<JomlehEntity> {
   await initFirebase();
   const db = getFirestore();
   const snapshot = await db.collection(JOMLEHA_COLLECTION).doc(id).get();
