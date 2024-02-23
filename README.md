@@ -2,7 +2,7 @@
 
 ### Jomleha
 
-Developed with Next.js and deployed on Vercel. Uses Firebase Firestore as its backing database. That's all. Oh, and you can find the [Admin Panel's source code here](https://github.com/PHELAT/panel.jomleha.social).
+Developed with Next.js and deployed on Vercel. Uses Firebase Firestore as its backing database. That's all for now.
 
 ### Run Locally
 
