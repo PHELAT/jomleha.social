@@ -1,4 +1,4 @@
-# WIP
+# 1.2.0
 
 ### UI Changes
 
@@ -13,7 +13,7 @@
 ### Housekeeping
 
 - Refactor the whole codebase for better performance, readability and maintainability.
-- Format the whole project using Prettier. 21458e65ae16ef6f4b35c613a59168eb08eb06e7...ac2531005a328f92bc70c4b852abbcbf360b5ed3
+- Format the whole project using Prettier. 21458e65ae16ef6f4b35c613a59168eb08eb06e7...ac2531005a328f92bc70c4b852abbcbf360b5ed3 a9f5a98caa2f53760fb5f70b1a6b75116b2be728
 
 ### Dependency Updates
 
