@@ -8,11 +8,11 @@ import JomlehContext from "@/components/JomlehContext";
 export default async function DetailPage({ params }: DetailProps) {
   const data = await getJomleh(params.id);
   return (
-    <div className="flex flex-col h-screen justify-between">
-      <main className="w-full h-full flex items-center justify-center px-8">
+    <div className="flex h-screen flex-col justify-between">
+      <main className="flex h-full w-full items-center justify-center px-8">
         <div className="max-w-md">
           <Dabire>
-            <div className="flex flex-col overflow-y-auto no-scrollbar">
+            <div className="no-scrollbar flex flex-col overflow-y-auto">
               <Jomleh content={data} />
               <JomlehContext context={data.context} />
             </div>

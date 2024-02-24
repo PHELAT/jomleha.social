@@ -11,11 +11,12 @@
 - Cache detail page response for 24 hours. This is due to the fact we don't update the content.
 
 ### Housekeeping
- 
+
 - Refactor the whole codebase for better performance, readability and maintainability.
 - Format the whole project using Prettier. 21458e65ae16ef6f4b35c613a59168eb08eb06e7...ac2531005a328f92bc70c4b852abbcbf360b5ed3
 
 ### Dependency Updates
+
 - Update next to 14.1.0 a4524cc912e06fc2d56ee1cd1b3147baf4a1fbb4
 - Update @vercel/edge-config to 1.0.2 17e80f01c7d896125d56a6c2698d83c9f58ec584
 - Update firebase-admin to 11.11.1 a8c508c604c88824961b20b41d6117b8d8a75c21

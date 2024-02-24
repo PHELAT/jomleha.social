@@ -6,7 +6,7 @@ export default function Jomleh({ content, link }: JomlehProps) {
     const hoverUnderline = link ? "hover:underline" : "";
     return (
       <p
-        className={`font-mono font-medium text-zinc-200 text-lg inline whitespace-pre-line ${hoverUnderline}`}
+        className={`inline whitespace-pre-line font-mono text-lg font-medium text-zinc-200 ${hoverUnderline}`}
       >
         {content.jomleh}
       </p>

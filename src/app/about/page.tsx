@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 
 export default function AboutPage() {
   return (
-    <div className="flex flex-col h-screen justify-between bg-black">
-      <main className="w-full h-full flex items-center justify-center px-8">
+    <div className="flex h-screen flex-col justify-between bg-black">
+      <main className="flex h-full w-full items-center justify-center px-8">
         <div className="flex flex-col font-mono" dir="auto">
           <p>تو این تاریکی کنار ماه</p>
           <p>زمان نداره نگاه به ما</p>
@@ -14,7 +14,7 @@ export default function AboutPage() {
       </main>
       <Footer link="/" showIcons={true} />
     </div>
-  )
+  );
 }
 
 export const metadata: Metadata = {

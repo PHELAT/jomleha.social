@@ -7,7 +7,7 @@ export default function Footer({ link, showIcons }: FooterProps) {
     <>
       <footer className="w-full">
         <div
-          className={`w-full h-24 flex flex-row items-center px-8 lg:px-16 ${footerJustify}`}
+          className={`flex h-24 w-full flex-row items-center px-8 lg:px-16 ${footerJustify}`}
         >
           <JomlehaIcon href={link} />
           {showIcons && <JomlehaExternalLinks />}
@@ -39,7 +39,7 @@ function JomlehaIcon({ href }: { href: FooterLink }) {
 
 function JomlehaExternalLinks() {
   return (
-    <div className="flex flex-row gap-4 items-center">
+    <div className="flex flex-row items-center gap-4">
       <Link href="https://github.com/PHELAT/jomleha.social">
         <Image
           src="/github.svg"
